@@ -172,7 +172,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    line-height: 10px;
+    line-height: 15px;
 
 }
 .about .box{
@@ -184,27 +184,27 @@ body{
 }
 .about .box .year_company{
     min-width: 150px;
-    line-height: 5px;
+    line-height: 15px;
 }
 .about .box .year_company h5{
     text-transform: uppercase;
     color:black;
     font-weight: 600;
-    line-height: 10px;
+    line-height: 15px;
     font-size: 18px;
 }
 .about .box .text h4 {
     text-transform: uppercase;
     color: #2a7da2;
     font-size: 16px;
-    line-height: 10px;
+    line-height: 15px;
 }
 .skills li{
     
     display:flex;
     flex-direction:column;
     align-items: left;
-    line-height: 10px;
+    line-height: 15px;
     
    
 
