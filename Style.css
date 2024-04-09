@@ -271,7 +271,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    line-height: 10px;
+    line-height: 15px;
 
 }
 .about .box{
@@ -326,6 +326,7 @@ body{
     color: black;
     font-weight: 400;
     margin: 10px 0;
+    white-space: inherit;
 
 }
 .interest ul li .fa{
