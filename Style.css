@@ -5,8 +5,103 @@ box-sizing: border-box;
 font-family: "Poppins" , sans-serif;
 
 }
+
+@keyframes move-background {
+    from {
+      -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+      -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+  }
+  @-webkit-keyframes move-background {
+    from {
+      -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+      -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+  }
+  @-moz-keyframes move-background {
+    from {
+      -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+      -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+  }
+  @-webkit-keyframes move-background {
+    from {
+      -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+      -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+  }
+  .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .stars {
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+  }
+  
+  .twinkling {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    -moz-animation: move-background 40s linear infinite;
+    -ms-animation: move-background 40s linear infinite;
+    -o-animation: move-background 40s linear infinite;
+    -webkit-animation: move-background 40s linear infinite;
+    animation: move-background 40s linear infinite;
+  }
+  
+  .clouds {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    -moz-animation: move-background 120s linear infinite;
+    -ms-animation: move-background 120s linear infinite;
+    -o-animation: move-background 120s linear infinite;
+    -webkit-animation: move-background 120s linear infinite;
+    animation: move-background 120s linear infinite;
+  }
+  
+  .background-container img {
+    height: 70vh;
+    width: 70vh;
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+  }
+
+
 body{
-    background-color: lightblue ;
+    
     display: flex;
      justify-content: center;
      min-height: 100vh;
@@ -24,7 +119,7 @@ body{
 }
 .container .lado_Esquerdo{
     position: relative;
-    background-color: #003147;
+    background-color: #EE6507;
     padding: 30px;
 }
 .ProfileText{
@@ -42,7 +137,7 @@ body{
    border-radius: 50%;
    overflow:hidden ;
 }
-.ProfileText .img8x img{
+.ProfileText .img8x img {
    position: absolute; 
    top: 0
    left 0;
@@ -89,21 +184,22 @@ body{
 }
 .ContactInfo ul li .icon{
     display: inline;
-    width: 20px;
-    font-size: 13px;
-    color: #03a9f4;
+    width: 25px;
+    font-size: 20px;
+    color: white;
 }
 .ContactInfo ul li span a{
     color: white;
     font-weight: 300;
     text-decoration:none;
+    font-size: 16px;
 }
 .Education li{
     margin-bottom: 15px;
 
 }
 .Education h5{
-    color: #03a9f4;
+    color: white;
     font-weight: 500;
     position: relative;
     list-style: none;
@@ -160,6 +256,9 @@ body{
     background-color: white;
     padding: 40px;
 }
+.container .lado_Direito p {
+    color: black;
+}
 .about{
     margin-bottom: 50px;
     
@@ -168,11 +267,11 @@ body{
     margin-bottom: 0;
 }
 .title2{
-    color: #003147;
+    color: #EE6507;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    line-height: 15px;
+    line-height: 10px;
 
 }
 .about .box{
@@ -184,27 +283,27 @@ body{
 }
 .about .box .year_company{
     min-width: 150px;
-    line-height: 15px;
+    line-height: 5px;
 }
 .about .box .year_company h5{
     text-transform: uppercase;
     color:black;
     font-weight: 600;
-    line-height: 15px;
+    line-height: 10px;
     font-size: 18px;
 }
 .about .box .text h4 {
     text-transform: uppercase;
-    color: #2a7da2;
+    color: #EE6507;
     font-size: 16px;
-    line-height: 15px;
+    line-height: 10px;
 }
 .skills li{
     
     display:flex;
     flex-direction:column;
     align-items: left;
-    line-height: 15px;
+    line-height: 10px;
     
    
 
@@ -224,7 +323,7 @@ body{
 }
 .interest ul li {
     list-style: none;
-    color: #595757;
+    color: black;
     font-weight: 400;
     margin: 10px 0;
 
@@ -245,10 +344,42 @@ body{
 	border-radius:50px;
 	text-align:center;
   font-size:30px;
-	box-shadow: 2px 2px 3px #999;
+	box-shadow: 2px 2px 3px white;
   z-index:100;
 }
 
 .my-float{
 	margin-top:16px;
 }
+
+  
+  
+  *::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: #000000;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #000000;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #000000;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: #EE6507;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #EE6507;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #EEA13D;
+  }
